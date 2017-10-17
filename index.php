@@ -1,3 +1,11 @@
+<?php 
+
+error_reporting(E_ALL ^ E_NOTICE);
+include(php/login.php);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,19 +40,26 @@
         <li><a href="">Forum</a></li>
       </ul>
       
-      
- <ul class="nav navbar-nav navbar-right">
-
-        <li><a href="login.html">Login/Sign Up</a></li>
+  
+   <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">Welcome <b> <?php echo $_SESSION['login_user']; ?> </b>Logout</a>
+        </li>
       </ul>
-
+   
      
-      
-            
-    </div><!-- /.navbar-collapse -->
+     <!--   <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html">Login/Sign Up</a></li>
+      </ul>  -->
+     
+
+      </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 
+            
 
+     <!-- <h2><a href = "logout.php">Sign Out</a></h2>-->
+      
 <!-- *****************************************NAVBAR ENDS HERE **************************************************-->
 
 

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>LOgin</title>
+	<title>Login</title>
 	 <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/login.css">
@@ -33,10 +33,10 @@
         <li><a href="">Forum</a></li>
       </ul>
       
-      <?php if(isset($_SESSION['login_user'])) {?>
+     <!--   <?php if(isset($_SESSION['login_user'])) {?>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="php/logout.php">Hi <b> <?php echo $_SESSION['login_user']; ?> </b>Logout</a>
+          <a href="">Hi <b> <?php echo $_SESSION['login_user']; ?> </b>Logout</a>
         </li>
       </ul>
 
@@ -44,7 +44,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="">Login/Sign Up</a></li>
       </ul>
-      <?php } ?>
+      <?php } ?>  -->
             
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -58,12 +58,12 @@
                 <div class="container">
                     <div class="login-header">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">     <!-- 6,6,12 -->
                                 <div class="login-logo">
                                     <img src="" alt="LiveTwice!" class="img-responsive">
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-8">
                                 <div class="login-details">
                                     <ul class="nav nav-tabs navbar-right">
                                         <li><a data-toggle="tab" href="#register">Register</a></li>
@@ -86,16 +86,25 @@
                                     <form>
                                         <div class="form-details">
                                             <label class="user">
-                                                <input type="text" name="username" placeholder="Full Name" id="username">
+                                                <input type="text" name="username" placeholder="Full Name" id="username" required>
                                             </label>
                                             <label class="mail">
-                                                <input type="email" name="mail" placeholder="Email Address" id="mail">
+                                                <input type="email" name="mail" placeholder="Email Address" id="mail" required>
+                                            </label>
+                                            <label class="DOB">
+                                                <input type="date" name="DOB" placeholder="Date of Birth" id="DOB" required>
+                                            </label>
+                                           
+                                            <label class="don_type">
+                                                <input type="don_type" name="don_type" placeholder="Donation Type- Live or Deceased " id="don_type" required>
+                                         
+                                            </label>
+
+                                            <label class="pass">
+                                                <input type="password" name="passsword" placeholder="Password" id="password" required>
                                             </label>
                                             <label class="pass">
-                                                <input type="password" name="passsword" placeholder="Password" id="password">
-                                            </label>
-                                            <label class="pass">
-                                                <input type="password" name="passsword" placeholder="Confirm Password" id="password">
+                                                <input type="password" name="passsword" placeholder="Confirm Password" id="password" required>
                                             </label>
                                         </div>
                                         <button type="submit" class="form-btn" onsubmit="">Register</button>
@@ -110,16 +119,16 @@
                                    <!-- <h3><font color="red"><a href="#register">Create an account</font></a></h3>-->
                                 </div>
                                 <div class="login-form">
-                                    <form method="POST" action="php/login.php">
+                                    <form method="POST" action="index.php">
                                         <div class="form-details">
                                             <label class="user">
-                                                <input type="text" name="username" placeholder="Username" id="username">
+                                                <input type="text" name="username" placeholder="Username" id="username" required>
                                             </label>
                                             <label class="pass">
-                                                <input type="password" name="passsword" placeholder="Password" id="password">
+                                                <input type="password" name="passsword" placeholder="Password" id="password" required>
                                             </label>
                                         </div>
-                                        <button type="submit" class="form-btn" onsubmit="">Login</button>
+                                        <button type="submit" class="form-btn" value="submit">Login</button>
                                     </form>
                                 </div>
                             </div>
