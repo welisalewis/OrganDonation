@@ -33,14 +33,14 @@
         <li><a href="">Forum</a></li>
       </ul>
       
-     <!--   <?php if(isset($_SESSION['login_user'])) {?>
+     <!--   <?php (($_SESSION[])) {?>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="">Hi <b> <?php echo $_SESSION['login_user']; ?> </b>Logout</a>
+          <a href="">Hi <b> <?php  $_SESSION[]; ?> </b>Logout</a>
         </li>
       </ul>
 
-      <?php } else { ?>
+      <?php }  { ?>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="">Login/Sign Up</a></li>
       </ul>
@@ -78,7 +78,7 @@
 
                     <div class="tab-content">
                         <? php 
-                        include (log.php);
+                        include (registration.php);
                         ?>
                         <div id="register" class="tab-pane">
                            <div class="login-inner">
@@ -86,7 +86,7 @@
                                     <h1>Don't have an account? <span>Create one now!</span></h1>
                                 </div>
                                 <div class="login-form">
-                                    <form method="POST" action="registration.php">
+                                    <form method="POST" action="">
                                         <div class="form-details">
                                             <label class="user">
                                                 <input type="text" name="username" placeholder= "Name" id="username" required>
@@ -110,12 +110,15 @@
                                                 <input type="password" name="cpasssword" placeholder="Confirm Password" id="password" required>
                                             </label>
                                         </div>
-                                        <button type="submit" class="form-btn" onsubmit="">Register</button>
+                                        <button type="submit" class="form-btn" onsubmit="registration.php" >Register</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                         <div id="login" class="tab-pane fade in active">
+                            <? php
+                            include(login_1.php);
+                            ?>
                             <div class="login-inner">
                                 <div class="title">
                                     <h1> <span>Login!</span></h1>

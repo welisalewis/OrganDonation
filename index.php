@@ -1,7 +1,7 @@
 <?php 
 
 error_reporting(E_ALL ^ E_NOTICE);
-include(php/login.php);
+include(log.php);
 ?>
 
 
@@ -37,7 +37,7 @@ include(php/login.php);
         <li class="active"><a href="">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="">Laws</a></li>
         <li><a href="">Helplines</a></li>
-        <li><a href="">Forum</a></li>
+        <li><a href="exp.php">Forum</a></li>
       </ul>
       
   
