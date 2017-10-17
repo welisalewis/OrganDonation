@@ -24,6 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	if(isset($_POST['submit'])){
 		if(empty($_POST['username'])|| empty(_POST['password'])){
 			$error="Username or password is Invalid";
+			echo $error;
 		}
 	
 }
@@ -57,6 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       else
        {
          $error = "Your Login Name or Password is invalid";
+         echo $error;
 
       }
    }

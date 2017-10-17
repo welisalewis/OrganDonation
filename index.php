@@ -1,7 +1,7 @@
 <?php 
 
 error_reporting(E_ALL ^ E_NOTICE);
-include(log.php);
+include(login_1.php);
 ?>
 
 

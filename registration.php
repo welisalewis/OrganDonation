@@ -3,7 +3,7 @@
 
 error_reporting(E_ALL ^ E_NOTICE);
 
-//session_start();
+session_start();
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'organ');
@@ -31,7 +31,7 @@ function register($con)
 
        $query="INSERT INTO user(username,email,DOB,don_type,password,cpassword) VALUES ('$username','$email','$DOB','$donation','$password','$cpassword')";
       $data=mysqli_query($con,$query) or die(mysqli_error($con));
-
+        
       if($data){
       	echo "Your registrartion is complete";
       }
