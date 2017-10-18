@@ -31,9 +31,9 @@
      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.php">Home </a></li>
-        <li><a href="">Laws</a></li>
-        <li><a href="">Helplines</a></li>
-        <li class="active"><a href="forum.php">Forum<span class="sr-only">(current)</span></a></li>
+        <li><a href="wtlaws.html">Laws</a></li>
+        <li><a href="index.html#below">Helplines</a></li>
+        <li class="active"><a href="forum.php">Forum<span class="sr-only"></span></a></li>
       </ul>
       
       <?php if(isset($_SESSION['login_user'])) {?>
@@ -94,13 +94,29 @@
                                 <br>
                                 <h6 class="pull-right" id="count_message"></h6>
                                 <button class="btn btn-info" name="post_submit" type="submit">Post </button>
-                            </form>
+
+                                
+                          </form>
+
                         </div>
                     </div>
                 </div>
             </div>
     </div>
 </div>
+
+                                  <form onsubmit="myFunction()">
+                                  
+
+                                  <script>
+                                  function myFunction() 
+                                  {
+                                      alert("Thank You for your feedback!");
+                                  }
+                                  </script>
+
+                                   </form>
+
 
 <br><br><br><br><br><br>
   
